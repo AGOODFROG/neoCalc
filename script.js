@@ -31,5 +31,18 @@ function comput(num1, oporator, num2){
 
     }
 }
+const buttons = document.querySelectorAll(".number")
 
-console.log(comput(4,"/",2))
+for(let i of buttons){
+    i.addEventListener("click",
+    function(){
+        if( document.querySelector(".display").textContent[1] === " "){// checks to see if white spaces after filler text
+            document.querySelector(".display").textContent = i.innerHTML
+        }else{
+            document.querySelector(".display").textContent += i.innerHTML
+        }
+
+         
+         
+    })
+}
