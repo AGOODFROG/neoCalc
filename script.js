@@ -1,6 +1,7 @@
 let num1
 let num2
 let oporator
+let operatorIndex
 
 function add(num1 , num2){
     return num1 + num2
@@ -40,9 +41,19 @@ for(let i of buttons){
             document.querySelector(".display").textContent = i.innerHTML
         }else{
             document.querySelector(".display").textContent += i.innerHTML
-        }
+        }      
+    })
+}
+const oporatorsList = document.querySelectorAll(".operator")
 
-         
-         
+for(let i of oporatorsList){
+    i.addEventListener("click",
+    function (){
+        let input = document.querySelector(".display").textContent // cont is not used as the for of loop remames input
+        num1 = input
+        oporator = i.textContent
+        input += i.textContent
+        operatorIndex = input.length - 1
+
     })
 }
