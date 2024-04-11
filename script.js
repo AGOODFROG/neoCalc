@@ -80,5 +80,12 @@ for(let i of oporatorsList){
     })
 }
 document.querySelector(".equal").addEventListener("click",parseNum2)
+document.querySelector(".clear").addEventListener("click",function(){
+    document.querySelector(".display").textContent = ""
+})
+document.querySelector(".backspace").addEventListener("click",function(){
+    document.querySelector(".display").textContent = document.querySelector(".display").textContent.slice(0,-1)
+    
+})
  
 
